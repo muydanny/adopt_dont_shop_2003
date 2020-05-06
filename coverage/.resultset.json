@@ -187,6 +187,33 @@
         1,
         null
       ],
+      "/Users/dannyramos/turing/2module/adopt_dont_shop_2003/spec/features/shelters/user_can_see_individual_shelter_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/dannyramos/turing/2module/adopt_dont_shop_2003/app/models/shelter.rb": [
         1,
         null,
@@ -210,6 +237,6 @@
         null
       ]
     },
-    "timestamp": 1588739882
+    "timestamp": 1588805138
   }
 }
