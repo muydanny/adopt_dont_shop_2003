@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get '/shelters', to: 'shelters#index'
-  get 'shelters/:id', to: 'shelters#show'
+  # get '/shelters', to: 'shelters#index'
+  # get 'shelters/:id', to: 'shelters#show'
+
+  resources :shelters, only: [:index, :show, :new, :create]   
 end
