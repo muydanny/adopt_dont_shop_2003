@@ -7,7 +7,7 @@ RSpec.describe "shelters show page", type: :feature do
                               city: "Denver",
                               state: "CO",
                               zip: 80223)
-    shelter_2 = Shelter.create(name: "Pick a Pal",
+    shelter_2 = Shelter.create(name: "Pick a Pet",
                               address: "123 Fake St",
                               city: "Denver",
                               state: "CO",
