@@ -15,15 +15,11 @@ RSpec.describe "Delete a shelter" do
 
     visit '/shelters'
     expect(page).to have_content(shelter_1.name)
-    expect(page).to have_content(shelter_1.address)
-    expect(page).to have_content(shelter_1.city)
-    expect(page).to have_content(shelter_1.state)
-    expect(page).to have_content(shelter_1.zip)
 
-    visit "/shelters/#{shelter.id}"
+    visit "/shelters/#{shelter_1.id}"
 
     click_link "Delete Shelter"
-
+    
     expect(current_path).to eq("/shelters")
     expect(page).to_not have_content("Dumb Friends League")
     expect(page).to_not have_content("1191 Yuma St")
@@ -31,7 +27,7 @@ RSpec.describe "Delete a shelter" do
     expect(page).to_not have_content("CO")
     expect(page).to_not have_content(80223)
     expect(page).to have_content(shelter_2.name)
-    
+
   end
 end
 
