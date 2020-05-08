@@ -6,3 +6,4 @@
   <p> City: <%= @shelter.city || "Not found" %></p>
   <p> State: <%= @shelter.state || "Not found" %></p>
   <p> Zip: <%= @shelter.zip || "Not found" %></p>
+  <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit", method: "get" %>
