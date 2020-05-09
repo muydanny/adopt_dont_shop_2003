@@ -8,6 +8,10 @@ class PetsController < ApplicationController
     end
   end
 
+  def show
+     @pet = Pet.find(params[:id])
+  end
+
   def shelter_id
     params.permit(:shelter_id)[:shelter_id]
   end
