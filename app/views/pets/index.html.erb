@@ -6,4 +6,5 @@
   <p><%= pet.approximate_age %></p>
   <p><%= pet.sex %></p>
   <p><%= "Shelter: #{pet.shelter.name}" %></p>
+  <%= button_to "Create Pet", "/shelters/#{pet.shelter.id}/pets/new", method: "get", action: "new" %>
 <% end %>
