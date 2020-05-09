@@ -19,10 +19,12 @@ pet_1 = Pet.create(image: "https://whatyouth.com/wp-content/uploads/2016/03/what
                    name: "Frank",
                    approximate_age: 3,
                    sex: "Female",
+                   adoptable: "Yes",
                    shelter_id: shelter_1.id)
 
 pet_2 = Pet.create(image: "https://i.pinimg.com/474x/81/28/2f/81282fc4a8547a306f43ba5354ed6697.jpg",
                    name: "Uzi",
                    approximate_age: 8,
                    sex: "Male",
+                   adoptable: "Yes",
                    shelter_id: shelter_2.id)

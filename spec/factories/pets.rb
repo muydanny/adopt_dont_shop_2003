@@ -4,6 +4,7 @@ FactoryBot.define do
       name  { "Frank" }
       approximate_age { 3 }
       sex { ["Female", 'Male'].shuffle.first }
+      adoptable { "Yes" }
       shelter
   end
 end

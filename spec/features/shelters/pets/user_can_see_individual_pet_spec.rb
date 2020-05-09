@@ -1,39 +1,27 @@
 require 'rails_helper'
 
-RSpec.describe "shelters show page", type: :feature do
-  it "can see an individual shelter" do
-    shelter_1 = Shelter.create(name: "Dumb Friends League",
-                              address: "1191 Yuma St",
-                              city: "Denver",
-                              state: "CO",
-                              zip: 80223)
-    shelter_2 = Shelter.create(name: "Pick a Pet",
-                              address: "123 Fake St",
-                              city: "Denver",
-                              state: "CO",
-                              zip: 80209)
+RSpec.describe "When I visit '/pets/:id' " do
+  it "I see a pet's image, name, description, age, sex and status" do
+    shelter = create(:shelter)
+    pet = create(:pet, shelter: shelter)
 
-    visit "/shelters/#{shelter_1.id}"
+    visit "/pets/#{pet.id}"
 
-    expect(page).to have_content(shelter_1.name)
-    expect(page).to have_content("Address: #{shelter_1.address}")
-    expect(page).to have_content("City: #{shelter_1.city}")
-    expect(page).to have_content("State: #{shelter_1.state}")
-    expect(page).to have_content("Zip: #{shelter_1.zip}")
-    expect(page).not_to have_content(shelter_2.name)
+
+    expect(page.find("img#pet-image-#{pet.id}")).to be_truthy
+    expect(page).to have_content(pet.name)
+    expect(page).to have_content(pet.approximate_age)
+    expect(page).to have_content(pet.sex)
+    expect(page).to have_content("Adoptable: #{pet.adoptable}")
   end
 end
 
-[ ] done
 
-User Story 9, Pet Show
-
-As a visitor
-When I visit '/pets/:id'
-Then I see the pet with that id including the pet's:
-- image
-- name
-- description
-- approximate age
-- sex
-- adoptable/pending adoption status
+# When I visit '/pets/:id'
+# Then I see the pet with that id including the pet's:
+# - image
+# - name
+# - description
+# - approximate age
+# - sex
+# - adoptable/pending adoption status
