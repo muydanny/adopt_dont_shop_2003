@@ -17,6 +17,19 @@ class PetsController < ApplicationController
     @pet = Pet.new(shelter_id: params["shelter_id"])
   end
 
+  def edit
+    @pet = Pet.find(params[:id])
+  end
+
+  def update
+    pet = Pet.update(params[:id], pet_params)
+    if pet.save
+      redirect_to "/pets/#{pet.id}"
+    else
+      redirect_to "/pets/#{pet.id}/edit"
+    end
+  end
+
   def create
     # pet = Pet.new(pet_params)
     pet = Pet.new(
@@ -39,9 +52,9 @@ class PetsController < ApplicationController
     params.permit(:shelter_id)[:shelter_id]
   end
 
-  # private
-  #
-  # def pet_params
-  #   params.require(:pet).permit(:image, :name, :description, :approximate_age, :sex)
-  # end
+  private
+
+  def pet_params
+    params.require(:pet).permit(:image, :name, :description, :approximate_age, :sex)
+  end
 end
