@@ -1,0 +1,20 @@
+<h1>Create a new Pet</h1>
+
+<%= form_for @pet, url: {action: "create"} do |f| %>
+  <%= label_tag(:image) %>
+  <%= f.text_field :image %>
+  <br>
+  <%= label_tag(:name) %>
+  <%= f.text_field :name %>
+  <br>
+  <%= label_tag(:description) %>
+  <%= f.text_field :description %>
+  <br>
+  <%= label_tag(:approximate_age) %>
+  <%= f.text_field :approximate_age %>
+  <br>
+  <%= label_tag(:sex) %>
+  <%= f.text_field :sex %>
+  <br>
+  <%= f.submit "Create Pet" %>
+<% end %>
