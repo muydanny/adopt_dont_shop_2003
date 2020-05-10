@@ -9,5 +9,8 @@
   <%= link_to "Update Pet", "/pets/#{pet.id}/edit", method: "get" %>
   <br>
   <br>
+  <%= link_to "Delete Pet", "/shelters/#{pet.id}", method: "delete" %>
+  <br>
+  <br>
   <%= button_to "Create Pet", "/shelters/#{pet.shelter.id}/pets/new", method: "get", action: "new" %>
 <% end %>
