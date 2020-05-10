@@ -29,4 +29,6 @@ RSpec.describe "When I visit /pets" do
     expect(page).to have_content(pet_2.sex)
     expect(page).to have_content("Shelter: #{shelter_4.name}")
   end
+
+
 end
