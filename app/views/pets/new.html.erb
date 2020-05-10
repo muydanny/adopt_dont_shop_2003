@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>shelters</title>
+<style>
+
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+  background: #CAFAFE;
+}
+h2 {background-color: #2E86C1;
+    font-size: 40px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #FC4445;
+  color: white;
+  font-size: 30px;
+}
+
+.content {padding:20px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Adopt Dont Shop</h1>
+  <p>Bought Pets Dont Like You</p>
+</div>
+
 <h1>Create a new Pet</h1>
 
 <%= form_for @pet, url: {action: "create"} do |f| %>

@@ -1,9 +1,45 @@
-<h1>All Shelters</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>shelters</title>
+<style>
 
-<%= button_to "New Shelter", new_shelter_path, method: "get" %>
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+  background: #CAFAFE;
+}
+h2 {background-color: #2E86C1;
+    font-size: 35px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #FC4445;
+  color: white;
+  font-size: 30px;
+}
+
+.content {padding:20px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Adopt Dont Shop</h1>
+  <p>Bought Pets Dont Like You</p>
+</div>
+
+<h2 style="color:white;"> All Shelters</h2>
+
 
 <% @shelters.each do |shelter| %>
-  <h2><%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
+  <h3><%= link_to shelter.name, "/shelters/#{shelter.id}" %></h3>
   <%= link_to "Update Shelter", "/shelters/#{shelter.id}/edit", method: "get" %>
   <%= link_to "Delete Shelter", "/shelters/#{shelter.id}", method: "delete" %>
 <% end %>
+<br>
+<br>
+<%= button_to "New Shelter", new_shelter_path, method: "get" %>

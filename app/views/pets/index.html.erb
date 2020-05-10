@@ -1,9 +1,43 @@
-<h1>All Pets</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>shelters</title>
+<style>
+
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+  background: #CAFAFE;
+}
+h2 {background-color: #CAFAFE;
+    font-size: 40px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #FC4445;
+  color: white;
+  font-size: 30px;
+}
+
+.content {padding:20px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Adopt Dont Shop</h1>
+  <p>Bought Pets Dont Like You</p>
+</div>
+
+<h2 style="color:black;"> All Pets</h2>
 
 <% @pets.each do |pet| %>
-  <h2><%= image_tag(pet.image, id: "pet-image-#{pet.id}") %></h2>
-  <h2><%= link_to pet.name, "/pets/#{pet.id}" %></h2>
-  <p><%= pet.approximate_age %></p>
+  <h3><%= image_tag(pet.image, id: "pet-image-#{pet.id}") %></h3>
+  <h3><%= link_to pet.name, "/pets/#{pet.id}" %></h3>
+  <p><%= pet.approximate_age %><%= " years old" %></p>
   <p><%= pet.sex %></p>
   <p><%= "Shelter: " %><%= link_to pet.shelter.name, "/shelters/#{pet.shelter.id}" %></p>
   <%= link_to "Update Pet", "/pets/#{pet.id}/edit", method: "get" %>
