@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Pet Show page" do
   it "I see a link to update that Pet" do
+    updated_name = 'Rudolpho'
     shelter = create(:shelter)
     pet = create(:pet, shelter: shelter)
     visit "/pets/#{pet.id}"
@@ -10,9 +11,11 @@ RSpec.describe "Pet Show page" do
 
     expect(current_path).to eq("/pets/#{pet.id}/edit")
 
-    fill_in('pet_name', :with => 'Frankie')
-    save_and_open_page
-    click_button("Update Pet")
+    fill_in('pet_name', :with => updated_name)
+
+    expect do
+      click_button("Update Pet")
+    end.to change { pet.reload.name }
 
     expect(current_path).to eq("/pets/#{pet.id}")
     expect(page.find("img#pet-image-#{pet.id}")).to be_truthy

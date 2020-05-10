@@ -30,6 +30,11 @@ class PetsController < ApplicationController
     end
   end
 
+  def destroy
+    Pet.destroy(params[:id])
+    redirect_to "/pets"
+  end
+
   def create
     # pet = Pet.new(pet_params)
     pet = Pet.new(
