@@ -330,7 +330,7 @@ I am returned to the Shelter Index Page where I no longer see that shelter
 ```
 
 ```
-[ ] done
+[ X ] done
 
 User Story 15, Pet Update From Pets Index Page
 
@@ -341,7 +341,7 @@ When I click the link
 I should be taken to that pets edit page where I can update its information just like in User Story 11
 ```
 ```
-[ ] done
+[ X  ] done
 
 User Story 16, Pet Delete From Pets Index Page
 
@@ -353,7 +353,7 @@ I should be taken to the pets index page where I no longer see that pet
 ```
 
 ```
-[ ] done
+[  ] done
 
 User Story 17, Shelter Links
 
