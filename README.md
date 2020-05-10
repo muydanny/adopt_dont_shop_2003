@@ -353,7 +353,7 @@ I should be taken to the pets index page where I no longer see that pet
 ```
 
 ```
-[  ] done
+[ X ] done
 
 User Story 17, Shelter Links
 
@@ -363,7 +363,7 @@ Then that link takes me to that Shelter's show page
 ```
 
 ```
-[ ] done
+[ X ] done
 
 User Story 18, Pet Links
 
