@@ -287,7 +287,7 @@ and I am redirected to the Pet Show page where I see the Pet's updated informati
 ```
 
 ```
-[ ] done
+[ X ] done
 
 User Story 12, Pet Delete
 
@@ -306,7 +306,7 @@ and I am redirected to the pet index page where I no longer see this pet
 Users should be able to use the site easily. This means making sure there are links/buttons to reach all parts of the site and the styling/layout is sensible.
 
 ```
-[ ] done
+[ X ] done
 
 User Story 13, Shelter Update From Shelter Index Page
 
@@ -318,7 +318,7 @@ I should be taken to that shelters edit page where I can update its information 
 ```
 
 ```
-[ ] done
+[ X ] done
 
 User Story 14, Shelter Delete From Shelter Index Page
 

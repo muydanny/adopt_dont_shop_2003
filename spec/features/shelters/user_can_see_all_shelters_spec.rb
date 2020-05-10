@@ -8,5 +8,6 @@ RSpec.describe "shelters index page", type: :feature do
 
     expect(page).to have_content(shelter_1.name)
     expect(find_link("Update Shelter")).to be_truthy
+    expect(find_link("Delete Shelter")).to be_truthy
   end
 end
