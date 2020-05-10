@@ -29,7 +29,7 @@ RSpec.describe "When I visit /pets" do
     expect(page).to have_content(pet_2.sex)
     expect(page).to have_content("Shelter: #{shelter_4.name}")
     expect(all("Update Pet")).to be_truthy
-    # expect(find_link("Delete Pet")).to be_truthy
+    expect(all("Delete Pet")).to be_truthy
   end
 
 
